@@ -1,7 +1,7 @@
 This script creates start menu tiles for shutdown, restart, logoff, and suspend/hibernate.
-Browse to the folder to where you downloaded the CreateWindowsShutdownTiles.ps1 file and paste following command into the adress bar of the windows explorer:
+Download the file to your DESKTOP and paste following command into the search bar/run:
 
-`powershell "".\CreateWindowsShutdownTiles.ps1""`
+`powershell start-process powershell -verb runas -argument '-command Set-ExecutionPolicy RemoteSigned -scope currentuser;sl $Env:userprofile\desktop;.\CreateWindowsShutdownTiles.ps1'`
 
 To create the tiles it needs administrative rights, so choose yes if you're asked. That's it.
 
